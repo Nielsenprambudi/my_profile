@@ -1,14 +1,22 @@
-#header {
-    max-height: 500px;
+body, html {
+    height: 100%;
 }
 
-#profile {
-    position: relative;  
-    object-fit: cover;
-    border-radius: 10%;
+.container {
+    height: 100%;
+    background-image: url("profile_pict.jpg");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: repeat;
+    background-size: cover;
 }
 
-#body {
-    max-height: 500px;
+.body {
+    max-height: 200px;
     background-color: black;
+}
+
+.title-profile {
+    text-align: center;
+    color: #ffffff
 }
