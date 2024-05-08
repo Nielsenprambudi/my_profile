@@ -22,4 +22,23 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* opacity: 1;
+    animation: fading 2s linear; */
 }
+
+#intro2 {
+    opacity: 0;
+}
+
+#speciality {
+    opacity: 0;
+}
+
+#contactme {
+    opacity: 0;
+}
+
+/* @keyframes fading {
+    0%, 100% { opacity: 0}
+    50% { opacity: 1}
+} */

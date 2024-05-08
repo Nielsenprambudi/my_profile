@@ -4,13 +4,21 @@ let wheelCounter = 0;
 
 function scrollChangeText(e) {
     wheelCounter += 1;
+    let fadingTargetContent = document.getElementById('content');
+    let fadingTargetIntro2 = document.getElementById('intro2');
+    let fadingTargetSpec = document.getElementById('speciality');
+    let fadingTargetContact = document.getElementById('contactme');
+    
     if(wheelCounter === 1) {
-        document.getElementById('content').innerHTML = "My Name is Nielsen Prambudi";
+        fadingTargetIntro2.style.opacity = 1;
+        fadingTargetContent.style.opacity = 0;
     }
     if(wheelCounter === 2) {
-        document.getElementById('content').innerHTML = "I have many experienced as Front end website or android mobile developer using React Js or React Native";
+        fadingTargetIntro2.style.opacity = 0;
+        fadingTargetSpec.style.opacity = 1;
     }
     if(wheelCounter === 3) {
-        document.getElementById('content').innerHTML = "Please Contact Me!";
+        fadingTargetSpec.style.opacity = 0;
+        fadingTargetContact.style.opacity = 1;
     }
 }
