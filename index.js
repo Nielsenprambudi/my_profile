@@ -10,8 +10,29 @@ function scrollChangeText(e) {
     let fadingTargetContact = document.getElementById('contactme');
     
     if(wheelCounter === 1) {
-        fadingTargetIntro2.style.opacity = 1;
-        fadingTargetContent.style.opacity = 0;
+        // fadingTargetIntro2.style.opacity = 1;
+        let fadeEffectIntro2 = setInterval(function () {
+            if (!fadingTargetIntro2.style.opacity) {
+                fadingTargetIntro2.style.opacity = 0;
+            }
+            if (fadingTargetIntro2.style.opacity < 1) {
+                fadingTargetIntro2.style.opacity += 1;
+            } else {
+                clearInterval(fadeEffectIntro2);
+            }
+        }, 50);
+        
+        // fadingTargetContent.style.opacity = 0;
+        let fadeEffectContent = setInterval(function () {
+            if (!fadingTargetContent.style.opacity) {
+                fadingTargetContent.style.opacity = 1;
+            }
+            if (fadingTargetContent.style.opacity > 0) {
+                fadingTargetContent.style.opacity -= 0.1;
+            } else {
+                clearInterval(fadeEffectContent);
+            }
+        }, 100);
     }
     if(wheelCounter === 2) {
         fadingTargetIntro2.style.opacity = 0;
